@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+* {
+    font-family: Open Sans, sans-serif;
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+header {
+    background-image: url('../img/header-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+}
+/*
+    NAV BAR
+*/
+header nav {
+    background-color: white;
+    max-width: 90vw;
+    margin: 1em auto;
+    border-radius: 10px;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul > * {
+    display: flex;
+    align-items: center;
+}
+header nav ul li:not(:first-child) {
+    margin-right: 1em;
+}
+header nav ul li:first-child {
+    margin-right: auto;
+}
+header nav ul li img {
+    margin-left: 0.5em;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 100;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.5s ease;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+/*  
+    NAV HOVER ANIMATION
+*/
+header nav ul li a,
+header nav ul li a:after {
+  transition: all 0.5s;
+}
+header nav ul li a:hover {
+  color: lightskyblue;
+}
+header nav ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '';
+  background: lightskyblue;
+  height: 1px;
+}
+header nav ul li a:hover:after {
+  width: 100%;
+}
+
+/*
+    NAV MEDIA QUERY - FOR SMALL DEVICES
+*/
+@media (max-width: 875px) {
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    header nav ul li:not(:first-child) {
+        margin-left: 2em;
+        margin-bottom: 0.5em;
+    }
+    header nav ul li a {
+        display: block;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+}
