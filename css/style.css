@@ -24,6 +24,7 @@ header nav {
     max-width: 90vw;
     margin: 1em auto;
     border-radius: 10px;
+    position: relative;
 }
 header nav ul {
     list-style: none;
@@ -78,6 +79,26 @@ header nav ul li a:after {
 header nav ul li a:hover:after {
   width: 100%;
 }
+/*
+    NAV TOGGLE
+*/
+header nav label {
+    font-size: 2rem;
+    margin-left: 0.5em;
+    cursor: pointer;
+    color: lightskyblue;
+    display: none;
+}
+header nav label:hover {
+    color: black;
+}
+#toggle {
+    display: none;
+}
+#mobile-logo {
+    display: none;
+}
+
 
 /*
     NAV MEDIA QUERY - FOR SMALL DEVICES
@@ -101,5 +122,27 @@ header nav ul li a:hover:after {
         margin: auto;
         text-align: center;
     }
+    header nav label {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    }
+    #toggle:checked + .nav-menu {
+        display: block;
+    }
+
+    header nav ul li:first-child {
+        display: none;
+    }
+    #mobile-logo {
+        display: block;
+        position: absolute;
+        left: 42%;
+        z-index: 99;
+        top: 1em;
+        height: 42px;
+    }
+    
 
 }
