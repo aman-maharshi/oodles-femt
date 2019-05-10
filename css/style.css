@@ -98,12 +98,13 @@ header nav label:hover {
 #mobile-logo {
     display: none;
 }
-
-
 /*
-    NAV MEDIA QUERY - FOR SMALL DEVICES
+    NAV MEDIA QUERY HEADER - FOR SMALL DEVICES
 */
 @media (max-width: 875px) {
+    header nav {
+        padding: 0.5em;
+    }
     header nav ul {
         flex-direction: column;
     }
@@ -122,6 +123,9 @@ header nav label:hover {
         margin: auto;
         text-align: center;
     }
+    /*
+        NAV TOGGLE
+    */
     header nav label {
         display: block;
     }
@@ -131,18 +135,21 @@ header nav label:hover {
     #toggle:checked + .nav-menu {
         display: block;
     }
-
     header nav ul li:first-child {
         display: none;
     }
     #mobile-logo {
         display: block;
         position: absolute;
-        left: 42%;
+        left: 43%;
         z-index: 99;
         top: 1em;
-        height: 42px;
+        height: 58px;
     }
-    
-
 }
+@media (max-width: 600px) {
+    #mobile-logo {
+        left: 40%;
+    }
+} 
+
