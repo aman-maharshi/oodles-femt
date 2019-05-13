@@ -32,7 +32,7 @@ header nav {
     position: fixed;
     left: 2em;
     font-size: 0.9rem;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     z-index: 2;
 }
 header nav ul {
@@ -307,6 +307,9 @@ header .hero {
 .services-list li {
     cursor: pointer;
 }
+.services-list li img {
+    transition: transform 0.3s ease;
+}
 .services button {
     border: 1px solid rgb(39, 122, 173);
     border-radius: 5px;
@@ -330,4 +333,10 @@ header .hero {
     .services-list li {
         margin-bottom: 0;
     }
+}
+/*
+    JAVASCRIPT TRIGGERED CLASSES
+*/
+.zoom-image {
+    transform: scale(1.25);
 }
