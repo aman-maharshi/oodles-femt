@@ -32,6 +32,7 @@ header nav {
     /* position: relative; */
     position: fixed;
     left: 2em;
+    z-index: 2;
 }
 header nav ul {
     list-style: none;
@@ -270,9 +271,9 @@ header .hero {
 
 
 
-
+/*
+    SERVICES SECTION
+*/
 section {
-    height: 30vh;
-    background-color: lightgray;
-    margin-top: 5em;
+
 }
